@@ -134,6 +134,7 @@ public class TestImplementation {
 //            System.out.println("Title from product: " + titleOfProductText);
 //            System.out.println("Title from image: " + imageNameOfProductText);
 
+            //comparing texts for each element in the list
             assertTrue(titleOfProductText.equals(imageNameOfProductText));
 
         }
