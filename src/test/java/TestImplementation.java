@@ -130,8 +130,8 @@ public class TestImplementation {
             WebElement titleOfProduct = itemFromList.findElement(By.className("inventory_item_name"));
             WebElement imageNameOfProduct = itemFromList.findElement(By.cssSelector("[class=\"inventory_item_img\"] img"));
 
-            String titleOfProductText = titleOfProduct.getText();
-            String imageNameOfProductText = imageNameOfProduct.getDomAttribute("alt");
+//            String titleOfProductText = titleOfProduct.getText();
+//            String imageNameOfProductText = imageNameOfProduct.getDomAttribute("alt");
 
 //            System.out.println("Title from product: " + titleOfProductText);
 //            System.out.println("Title from image: " + imageNameOfProductText);
