@@ -123,18 +123,19 @@ public class TestImplementation {
         assertThat(driver.findElements(By.className("inventory_item")).size(), is(6));
 
         List<WebElement> inventoryList = driver.findElements(By.className("inventory_item"));
-        System.out.println(inventoryList.size());
-        System.out.println("--------------------");
 
         for (WebElement itemFromList : inventoryList) {
             WebElement titleOfProduct = itemFromList.findElement(By.className("inventory_item_name"));
             WebElement imageNameOfProduct = itemFromList.findElement(By.cssSelector("[class=\"inventory_item_img\"] img"));
 
-//            String titleOfProductText = titleOfProduct.getText();
-//            String imageNameOfProductText = imageNameOfProduct.getDomAttribute("alt");
+            String titleOfProductText = titleOfProduct.getText();
+            String imageNameOfProductText = imageNameOfProduct.getDomAttribute("alt");
 
 //            System.out.println("Title from product: " + titleOfProductText);
 //            System.out.println("Title from image: " + imageNameOfProductText);
+
+            assertTrue(titleOfProductText.equals(imageNameOfProductText));
+
         }
 
 
