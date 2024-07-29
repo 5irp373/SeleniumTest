@@ -73,10 +73,10 @@ public class TestImplementation {
         assertThat(driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).getText(), containsString("Epic sadface: Sorry, this user has been locked out."));
 
 
-        System.out.println("Number of inventory_list elements: " + driver.findElements(By.className("inventory_list")).size());
+//       System.out.println("Number of inventory_list elements: " + driver.findElements(By.className("inventory_list")).size());
         assertThat(driver.findElements(By.className("inventory_list")).size(), is(0));
 
-        System.out.println("Number of login_container elements: " + driver.findElements(By.className("form_group")).size());
+//        System.out.println("Number of login_container elements: " + driver.findElements(By.className("form_group")).size());
         assertThat(driver.findElements(By.className("form_group")).size(), is(2));
 
     }
@@ -87,7 +87,7 @@ public class TestImplementation {
         //Im creating temporary ArrayLists which Im filling with that date. Then I simply compare both lists if they equal.
         login("standard_user", "secret_sauce");
 
-        System.out.println("Number of products on page: " + driver.findElements(By.className("inventory_item")).size());
+//        System.out.println("Number of products on page: " + driver.findElements(By.className("inventory_item")).size());
         assertThat(driver.findElements(By.className("inventory_item")).size(), is(6));
 
 
@@ -105,8 +105,8 @@ public class TestImplementation {
             namesFromImages.add(eachIMG.getDomAttribute("alt"));
         }
 
-        System.out.println(productItemNames);
-        System.out.println(namesFromImages);
+//        System.out.println(productItemNames);
+//        System.out.println(namesFromImages);
 
         //comparing the two lists (this will most probably break if the items are out of order?)
         assertTrue(productItemNames.equals(namesFromImages));
@@ -119,7 +119,7 @@ public class TestImplementation {
         //Assumption here is that each Inventory_item on page has 2 parts. The title and the image text (in same div). Im comparing these one by one using loop.
         login("standard_user", "secret_sauce");
 
-        System.out.println("Number of products on page: " + driver.findElements(By.className("inventory_item")).size());
+//        System.out.println("Number of products on page: " + driver.findElements(By.className("inventory_item")).size());
         assertThat(driver.findElements(By.className("inventory_item")).size(), is(6));
 
         List<WebElement> inventoryList = driver.findElements(By.className("inventory_item"));
