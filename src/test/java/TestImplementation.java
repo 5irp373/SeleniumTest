@@ -26,7 +26,7 @@ public class TestImplementation {
     }
 
     @After
-    public void teardown() {
+    public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
@@ -84,7 +84,7 @@ public class TestImplementation {
     @Test
     public void assertProductsShown() {
         //First attempt of assertProductShown. The idea here is to extract text from item name (label?) and alt text of images of same product.
-        //Im creating temporary ArrayLists which Im filling with that date. Then I simply compare both lists if they equal.
+        //I'm creating temporary ArrayLists which I'm filling with that date. Then I simply compare both lists if they equal.
         login("standard_user", "secret_sauce");
 
 //        System.out.println("Number of products on page: " + driver.findElements(By.className("inventory_item")).size());
@@ -115,8 +115,8 @@ public class TestImplementation {
 
     @Test
     public void assertProductsShownDifferentApproach() {
-        //Second attempt of assertProductShown test. The idea here is to make a list of inventory_items and then with for loop going throug them
-        //Assumption here is that each Inventory_item on page has 2 parts. The title and the image text (in same div). Im comparing these one by one using loop.
+        //Second attempt of assertProductShown test. The idea here is to make a list of inventory_items and then with for loop going through them
+        //Assumption here is that each Inventory_item on page has 2 parts. The title and the image text (in same div). I'm comparing these one by one using loop.
         login("standard_user", "secret_sauce");
 
 //        System.out.println("Number of products on page: " + driver.findElements(By.className("inventory_item")).size());
