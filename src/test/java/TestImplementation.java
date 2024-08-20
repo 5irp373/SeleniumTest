@@ -40,7 +40,7 @@ public class TestImplementation {
         assertThat(driver.getTitle(), containsString("Swag Labs"));
     }
 
-    //general login method
+    //general login method which is used in all tests
     public void login(String inputName, String inputPassword) {
         driver.get("https://www.saucedemo.com/");
 
@@ -162,7 +162,6 @@ public class TestImplementation {
 
         assertThat(driver.findElement(By.cssSelector("span[class=\"title\"]")).getText(), containsString("Checkout: Overview"));
         assertThat(driver.getCurrentUrl(), containsString("https://www.saucedemo.com/checkout-step-two.html"));
-
 
         driver.findElement(By.id("finish")).click();
 
